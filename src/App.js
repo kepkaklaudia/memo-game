@@ -1,12 +1,14 @@
 import { useImages } from "./useImages";
+import { Settings } from "./Settings";
 
 function App() {
+  const images = useImages();
 
-  useImages();
   return (
-    <div>
+    <>
       <h1 className="header"> Memo Game</h1>
-    </div>
+      <Settings />
+    </>
   );
 }
 
