@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const useImages = () => {
+
   const getRandomPage = () => Math.floor(Math.random() * 10) + 1;
 
   const buildURL = () => {
@@ -16,14 +17,19 @@ export const useImages = () => {
     return url;
   };
 
-  const response = axios(
-    {
-      url: buildURL(),
-      headers: {
-        Authorization: process.env.REACT_APP_API_KEY
-      }
-    })
-    .then(response => console.log(response.data))
-  console.log(response.data)
-
+  const getData = async () => {
+    try {
+      const response = await axios({
+        url: buildURL(),
+        headers: {
+          Authorization: process.env.REACT_APP_API_KEY
+        }
+      });
+      console.log(response.data.photos);
+    } catch (error) {
+      console.error("Something bad happened!");
+      console.log("error");
+    }
+  }
+  getData();
 };
