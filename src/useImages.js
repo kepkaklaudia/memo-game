@@ -1,7 +1,8 @@
 import axios from "axios";
+import { useState, useEffect } from "react";
 
 export const useImages = () => {
-
+  const [images, setImages] = useState([]);
   const getRandomPage = () => Math.floor(Math.random() * 10) + 1;
 
   const buildURL = () => {
@@ -25,11 +26,15 @@ export const useImages = () => {
           Authorization: process.env.REACT_APP_API_KEY
         }
       });
-      console.log(response.data.photos);
+      setImages(response.data.photos);
     } catch (error) {
       console.error("Something bad happened!");
-      console.log("error");
     }
   }
-  getData();
+
+  useEffect(() => {
+    getData();
+  }, [])
+
+  return images;
 };
