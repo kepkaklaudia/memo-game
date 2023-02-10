@@ -11,7 +11,7 @@ export const Heading = styled.h2`
   text-align: center;
 `;
 
-export const RadioBoxWrapper = styled.div`
+export const BoxWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(255,255,255,0.5);
