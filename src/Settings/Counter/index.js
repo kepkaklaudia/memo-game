@@ -1,3 +1,5 @@
+import { Arrow, Button } from "./styled";
+
 export const Counter = ({ cardsCount, onClick }) => {
   const step = 2;
 
@@ -14,18 +16,18 @@ export const Counter = ({ cardsCount, onClick }) => {
   };
 
   return (
-    <div>
-      <button
+    <>
+      <Button
         onClick={decrement}
       >
-        -
-      </button>
+        <Arrow decrement />
+      </Button>
       {cardsCount}
-      <button
+      <Button
         onClick={increment}
       >
-        +
-      </button>
-    </div>
+        <Arrow />
+      </Button>
+    </>
   );
 }
