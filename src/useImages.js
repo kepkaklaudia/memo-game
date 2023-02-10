@@ -27,7 +27,6 @@ export const useImages = gameSettings => {
         }
       });
       setImages(response.data.photos);
-      console.log(response.data.photos)
     } catch (error) {
       console.error("Something bad happened!");
     }
