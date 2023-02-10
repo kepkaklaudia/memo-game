@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export const useImages = () => {
+export const useImages = gameSettings => {
   const [images, setImages] = useState([]);
   const getRandomPage = () => Math.floor(Math.random() * 10) + 1;
 
@@ -9,10 +9,10 @@ export const useImages = () => {
     let url = new URL("https://api.pexels.com/v1/search");
 
     url.search = new URLSearchParams({
-      query: "space", //tochange
+      query: gameSettings.category,
       orientation: "square",
       size: "small",
-      per_page: 2, //tochange
+      per_page: gameSettings.cardsCount / 2,
       page: getRandomPage(),
     })
     return url;
@@ -27,6 +27,7 @@ export const useImages = () => {
         }
       });
       setImages(response.data.photos);
+      console.log(response.data.photos)
     } catch (error) {
       console.error("Something bad happened!");
     }
@@ -34,7 +35,7 @@ export const useImages = () => {
 
   useEffect(() => {
     getData();
-  }, [])
+  }, [gameSettings])
 
   return images;
 };
