@@ -1,4 +1,5 @@
+import { useImages } from "../useImages"
 
-export const Board = () => {
-  
+export const Board = ({ gameSettings }) => {
+  const images = useImages(gameSettings);
 }
