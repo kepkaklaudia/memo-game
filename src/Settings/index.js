@@ -16,7 +16,9 @@ export const Settings = () => {
       <h3>
         Category:
       </h3>
-      <BoxWrapper>
+      <BoxWrapper
+        responsive
+      >
         {categories.map(item => (
           <RadioBox
             key={item}
@@ -35,8 +37,7 @@ export const Settings = () => {
           onClick={setCardsCount}
         />
       </BoxWrapper>
-      <Button> Start Game </Button>
-
+      <Button>Start</Button>
     </Wrapper>
   )
 };
