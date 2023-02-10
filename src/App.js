@@ -1,11 +1,14 @@
 import { useImages } from "./useImages";
 import { Settings } from "./Settings";
+import { useState } from "react";
 
 function App() {
-  const images = useImages();
+  const [gameSettings, setGameSettings] = useState()
+  const images = useImages(gameSettings);
 
-  const startGame = options => {
-    console.log(options);
+  const startGame = settings => {
+    setGameSettings(settings);
+    console.log(settings)
   };
 
   return (
