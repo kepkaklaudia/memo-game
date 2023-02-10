@@ -12,7 +12,7 @@ export const Button = styled.button`
   }
 
   &:active {
-    scale: 1.1;  
+    scale: 1.2;  
   }
 `;
 
