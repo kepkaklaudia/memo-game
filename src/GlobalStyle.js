@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
     width: 100vh;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     margin: 0 auto;
     background-color: rgba(0,140,150,1);
     background-image: linear-gradient(41deg, rgba(0,92,96,1) 0%, rgba(0,140,150,1) 35%, rgba(0,255,132,1) 100%);
