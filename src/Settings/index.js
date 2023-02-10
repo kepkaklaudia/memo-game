@@ -4,9 +4,13 @@ import { Wrapper, Heading, BoxWrapper, Button } from "./styled";
 import { useState } from "react";
 import { Counter } from "./Counter";
 
-export const Settings = () => {
+export const Settings = ({ startGame }) => {
   const [category, setCategory] = useState(categories[0]);
   const [cardsCount, setCardsCount] = useState(initialCardsCount);
+
+  const onStartClick = () => {
+    startGame({ category, cardsCount });
+  };
 
   return (
     <Wrapper>
@@ -37,7 +41,7 @@ export const Settings = () => {
           onClick={setCardsCount}
         />
       </BoxWrapper>
-      <Button>Start</Button>
+      <Button onClick={onStartClick}>Start</Button>
     </Wrapper>
   )
 };
