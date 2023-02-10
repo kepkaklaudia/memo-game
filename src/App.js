@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1 className="header"> Memo Game</h1>
+      <h1>Memo Game</h1>
       <Settings />
     </>
   );

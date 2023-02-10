@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .header {
+  h1 {
     font-family: 'Permanent Marker', cursive;
     text-align:center;
   }
