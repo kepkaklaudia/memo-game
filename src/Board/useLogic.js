@@ -11,8 +11,20 @@ export const useLogic = (images) => {
     const d = shuffleCards(c);
     setCards(d);
   }
-  const onCardClick = uniqueId => {
-    console.log(uniqueId);
+
+  const flipCard = (clickedCardId) => {
+    const flippedCards = cards.map(card => {
+      if (card.uniqueId === clickedCardId) {
+        card.isShown = true
+      }
+      return card
+    })
+
+    setCards(flippedCards);
+  }
+
+  const onCardClick = clickedCardId => {
+    flipCard(clickedCardId);
   }
 
   useEffect(() => {
