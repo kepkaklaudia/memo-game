@@ -1,5 +1,5 @@
 import { Image } from "./Image"
-import { Wrapper, Card, Front, Back } from "./styled"
+import { Wrapper, Card, Side } from "./styled"
 
 export const Cards = ({ card, onCardClick }) => {
   const onClick = () => {
@@ -8,11 +8,11 @@ export const Cards = ({ card, onCardClick }) => {
 
   return (
     <Wrapper onClick={onClick}>
-      <Card>
-        <Front />
-        <Back>
+      <Card flipped={card.isShown} >
+        <Side front />
+        <Side back>
           <Image url={card.url} />
-        </Back>
+        </Side>
       </Card>
     </Wrapper>
   )
