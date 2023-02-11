@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { getFormedData, getPairedImages } from "./gameFunctions";
+import { addUniqueId, getFormedData, getPairedImages } from "./gameFunctions";
 
 export const useLogic = (images) => {
 
   const prepareCards = () => {
     const a = getFormedData(images);
     const b = getPairedImages(a);
+    const c = addUniqueId(b);
   }
 
   useEffect(() => {
