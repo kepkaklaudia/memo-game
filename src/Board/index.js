@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useImages } from "../useImages"
+import { Cards } from "./Cards";
 import { Loader } from "./Loader";
 import { useLogic } from "./useLogic";
 
@@ -14,7 +15,9 @@ export const Board = ({ gameSettings }) => {
 
   return (
     <>
-      {isLoading ? <Loader /> : <div></div>}
+      {isLoading ? <Loader /> : <div>
+        {cards.map(card => <Cards key={card.uniqueId} card={card}/>)}
+      </div>}
     </>
   )
 }
