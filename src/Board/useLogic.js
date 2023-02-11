@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import { getFormedData } from "./gameFunctions";
+import { getFormedData, getPairedImages } from "./gameFunctions";
 
 export const useLogic = (images) => {
 
-  const prepareCards = () =>{
+  const prepareCards = () => {
     const a = getFormedData(images);
+    const b = getPairedImages(a);
   }
-  useEffect(()=>{
-    if(images.length > 0 ) prepareCards();
+
+  useEffect(() => {
+    if (images.length > 0) prepareCards();
   }, [images]);
 
 }
