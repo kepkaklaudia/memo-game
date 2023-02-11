@@ -11,10 +11,13 @@ export const useLogic = (images) => {
     const d = shuffleCards(c);
     setCards(d);
   }
+  const onCardClick = uniqueId => {
+    console.log(uniqueId);
+  }
 
   useEffect(() => {
     if (images.length > 0) prepareCards();
   }, [images]);
 
-  return cards;
+  return { cards, onCardClick };
 }
