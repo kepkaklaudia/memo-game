@@ -7,7 +7,7 @@ import { useLogic } from "./useLogic";
 export const Board = ({ gameSettings }) => {
   const [isLoading, setIsLoading] = useState(true);
   const images = useImages(gameSettings);
-  const cards = useLogic(images);
+  const {cards, onCardClick} = useLogic(images);
 
   useEffect(() => {
     if (images.length > 0) setIsLoading(false);
@@ -16,7 +16,7 @@ export const Board = ({ gameSettings }) => {
   return (
     <>
       {isLoading ? <Loader /> : <div>
-        {cards.map(card => <Cards key={card.uniqueId} card={card}/>)}
+        {cards.map(card => <Cards key={card.uniqueId} card={card} onCardClick={onCardClick} />)}
       </div>}
     </>
   )
