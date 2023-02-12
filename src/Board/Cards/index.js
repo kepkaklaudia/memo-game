@@ -3,6 +3,7 @@ import { Wrapper, Card, Side } from "./styled"
 
 export const Cards = ({ card, onCardClick }) => {
   const onClick = () => {
+    if(card.isShown || card.isFound) return;
     onCardClick(card.uniqueId)
   }
 
