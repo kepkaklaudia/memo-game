@@ -8,12 +8,6 @@ export const Wrapper = styled.div`
   border-radius: 7px;
   margin-right: 20px;
   margin-bottom: 20px;
-
-  ${({ found }) => found && css`
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  background: rgba(189, 224, 254, 0.46);
-  `}
 `;
 
 export const Card = styled.div`
@@ -58,11 +52,13 @@ export const Side = styled.div`
   }
 
   ${({ found }) => found && css`
+    background: rgba(15, 42, 51, 0.7);
+
     &:hover {
       transform: none;
       box-shadow: none;
       cursor: not-allowed;
-      background: rgba(189, 224, 254, 0.46);
+      background: rgba(15, 42, 51, 0.7);
     }`
   }
 `;
