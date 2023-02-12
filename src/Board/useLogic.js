@@ -41,5 +41,23 @@ export const useLogic = (images) => {
       prepareCards();
   }, [images]);
 
+  useEffect(() => {
+    if (visibleCards.length >= maxVisibleCards) {
+
+      const updatedCards = cards.map(card => {
+        if (visibleCards.indexOf(card.uniqueId) !== -1) {
+          card.isShown = false
+        }
+        return card;
+      });
+
+      setTimeout(() => {
+        setCards(updatedCards);
+        setVisibleCards([]);
+      }, 1000);
+    }
+
+  }, [visibleCards]);
+
   return { cards, onCardClick };
 }
