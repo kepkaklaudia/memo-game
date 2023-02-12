@@ -3,6 +3,8 @@ import { addUniqueId, getFormedData, getPairedImages, shuffleCards } from "./gam
 
 export const useLogic = (images) => {
   const [cards, setCards] = useState([])
+  const [visibleCards, setVisibleCards] = useState([])
+  const maxVisibleCards = 2;
 
   const prepareCards = () => {
     const a = getFormedData(images);
@@ -17,18 +19,26 @@ export const useLogic = (images) => {
       if (card.uniqueId === clickedCardId) {
         card.isShown = true
       }
-      return card
+
+      if (card.isShown) {
+        setVisibleCards(oldState => [...oldState, card.uniqueId]);
+      }
+
+      return card;
     })
 
     setCards(flippedCards);
   }
 
   const onCardClick = clickedCardId => {
-    flipCard(clickedCardId);
+    if (visibleCards.length < maxVisibleCards) {
+      flipCard(clickedCardId)
+    };
   }
 
   useEffect(() => {
-    if (images.length > 0) prepareCards();
+    if (images.length > 0)
+      prepareCards();
   }, [images]);
 
   return { cards, onCardClick };
