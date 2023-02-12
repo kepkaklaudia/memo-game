@@ -36,6 +36,24 @@ export const useLogic = (images) => {
     };
   }
 
+  const checkMatch = () => {
+    const visible = cards.filter(card => visibleCards.indexOf(card.uniqueId) !== -1)
+    const matched = visible[0].id === visible[1].id;
+
+    const updatedCards = cards.map(card => {
+      if (visibleCards.indexOf(card.uniqueId) !== -1) {
+        card.isShown = false
+        card.isFound = matched;
+      }
+      return card;
+    });
+
+    setTimeout(() => {
+      setCards(updatedCards);
+      setVisibleCards([]);
+    }, 1000);
+  }
+
   useEffect(() => {
     if (images.length > 0)
       prepareCards();
@@ -43,20 +61,8 @@ export const useLogic = (images) => {
 
   useEffect(() => {
     if (visibleCards.length >= maxVisibleCards) {
-
-      const updatedCards = cards.map(card => {
-        if (visibleCards.indexOf(card.uniqueId) !== -1) {
-          card.isShown = false
-        }
-        return card;
-      });
-
-      setTimeout(() => {
-        setCards(updatedCards);
-        setVisibleCards([]);
-      }, 1000);
+      checkMatch();
     }
-
   }, [visibleCards]);
 
   return { cards, onCardClick };
