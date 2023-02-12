@@ -9,7 +9,7 @@ export const Cards = ({ card, onCardClick }) => {
   return (
     <Wrapper onClick={onClick}>
       <Card flipped={card.isShown} >
-        <Side front />
+        <Side front found={card.isFound} />
         <Side back>
           <Image url={card.url} />
         </Side>
