@@ -1,3 +1,31 @@
+## <img src="public/icon.png" height="30"/> Memo Game Website
+<img src="images/memo.gif" width="250" height="250"/>
+
+<img src="images/myIcons/iconK.svg" height="15"/> Made by Klaudia Kępka
+
+## <img src="images/myIcons/demo.png" height="20"/> Memo Game Demo Website:
+[Memo Game Demo Website](https://kepkaklaudia.github.io/memo-game/)
+
+## <img src="images/myIcons/quick.png" height="20"/> Quick Preview
+![gifPreview](images/preview.gif)
+
+## About the building process
+ I was exploring how the reactivity works and how to divide tasks to different components. I discovered more about fetching data from api and about passing props. I used styled-components to make the game look exactly how I want it. 
+ 
+ During the logical part of the game i was coding along the YouTube Tutorial video. I saw how much attention should be paid to every detail because the logic of even a simple game can be complex to be transferred to React.
+
+## Settings Menu
+After entering the page, you will see the settings - you can choose the theme of the pictures and the number of cards you want to play. By default we have "space" theme and 8 cards. After pressing the START button, the game begins!
+
+## How to play?
+The game starts with all the cards face down and player must turn over two cards at a time. If the two cards have the same picture, then the pictures match, so the cards will flip over, turn darker, and you won't be able to click them. You win if you match all the pictures. After winning, you will see the relevant information and the FINISH GAME button, which will take you back to the start screen. Then you can start the game again!
+
+## Responsive version
+You can play on your computer, tablet or phone. Feel free!
+
+## API Data
+The game uses images fetched from the Pexels API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,57 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Technologies used
+<img src="images/myIcons/html.png" height="90"/> <img src="images/myIcons/css.png" height="90"/> <img src="images/myIcons/js.png" height="90"/> <img src="images/myIcons/es6.png" height="90"/> <img src="images/myIcons/react.png" height="90"/> 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="images/myIcons/styled.png" height="90"/> <img src="images/myIcons/norm.png" height="90"/> <img src="images/myIcons/git.png" height="90"/> <img src="images/myIcons/api.png" height="90"/> <img src="images/myIcons/json.png" height="90"/>
