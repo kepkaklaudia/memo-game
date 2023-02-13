@@ -1,2 +1,2 @@
-export const categories = ["space", "landscapes", "dog"];
+export const categories = ["space", "travel", "animal"];
 export const initialCardsCount = 8;
