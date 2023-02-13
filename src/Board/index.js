@@ -4,7 +4,7 @@ import { Cards } from "./Cards";
 import { Loader } from "./Loader";
 import { Result } from "./Result";
 import { CardsBox } from "./styled";
-import { useLogic } from "./useLogic";
+import { useLogic } from "./GameLogic/useLogic";
 
 export const Board = ({ gameSettings, restartGame }) => {
   const [isLoading, setIsLoading] = useState(true);
