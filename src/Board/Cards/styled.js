@@ -5,15 +5,14 @@ export const Wrapper = styled.div`
   height: 150px;
   position: relative;
   perspective: 700px;
-  border-radius: 7px;
   margin-right: 20px;
   margin-bottom: 20px;
 `;
 
 export const Card = styled.div`
-  width: 150px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  height: 97%;
+  height: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
