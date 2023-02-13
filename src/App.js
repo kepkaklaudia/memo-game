@@ -9,12 +9,17 @@ function App() {
     setGameSettings(settings);
   };
 
+  const restartGame = () => {
+    setGameSettings();
+  }
+
   return (
     <>
       <h1>Memo Game</h1>
       {gameSettings ?
         <Board
           gameSettings={gameSettings}
+          restartGame={restartGame}
         /> :
         <Settings
           startGame={startGame}
