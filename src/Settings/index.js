@@ -1,8 +1,10 @@
 import { categories, initialCardsCount } from "./constants";
 import { RadioBox } from "./RadioBox";
-import { Wrapper, Heading, BoxWrapper, Button } from "./styled";
+import { Heading, BoxWrapper } from "./styled";
 import { useState } from "react";
 import { Counter } from "./Counter";
+import { Wrapper } from "../common/Wrapper";
+import { Button } from "../common/Button";
 
 export const Settings = ({ startGame }) => {
   const [category, setCategory] = useState(categories[0]);
@@ -41,7 +43,11 @@ export const Settings = ({ startGame }) => {
           onClick={setCardsCount}
         />
       </BoxWrapper>
-      <Button onClick={onStartClick}>Start</Button>
+      <Button
+        onClick={onStartClick}
+      >
+        Start
+      </Button>
     </Wrapper>
   )
 };
