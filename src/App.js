@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <Background />
+      <Background />
       <h1>Memo Game</h1>
       {gameSettings ?
         <Board
