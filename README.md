@@ -14,10 +14,11 @@
  
  During the logical part of the game i was coding along the YouTube Tutorial video. I saw how much attention should be paid to every detail because the logic of even a simple game can be complex to be transferred to React.
 
-## Settings Menu
+## How to play?
+### Settings Menu
 After entering the page, you will see the settings - you can choose the theme of the pictures and the number of cards you want to play. By default we have "space" theme and 8 cards. After pressing the START button, the game begins!
 
-## How to play?
+### Game Rules
 The game starts with all the cards face down and player must turn over two cards at a time. If the two cards have the same picture, then the pictures match, so the cards will flip over, turn darker, and you won't be able to click them. You win if you match all the pictures. After winning, you will see the relevant information and the FINISH GAME button, which will take you back to the start screen. Then you can start the game again!
 
 ## Responsive version
