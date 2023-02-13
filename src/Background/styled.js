@@ -46,7 +46,6 @@ export const Cube = styled.div`
     left: 50vw;
     top: 10vh;
   }
-}
 
   @keyframes cube {
     from {
@@ -58,5 +57,4 @@ export const Cube = styled.div`
       transform: scale(20) rotate(960deg) translate(-50%, -50%); 
       opacity: 0;
     }
-}
 `;
