@@ -4,8 +4,8 @@ export const Loader = styled.span`
   width: 5px;
   height: 5px;
   position: absolute;
-  left:50%;
-  top:30%;
+  left: 50%;
+  top: 30%;
   border-radius: 50%;
   background: #fff;
   animation: wave 1s ease-in infinite;
@@ -19,6 +19,7 @@ export const Loader = styled.span`
       0 0 0 30px rgba(255, 255,255, 0.4),
       0 0 0 40px rgba(255, 255,255, 0.2)
     }
+
     100% {  
       box-shadow:
       0 0 0 40px rgba(255, 255,255, 0),
