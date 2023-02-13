@@ -24,7 +24,7 @@ export const Button = styled.button`
     outline: 1px solid;
   } 
 
-  ${({ result }) => result && css`
+  ${({ final }) => final && css`
     width: 180px;
   `}
 `;

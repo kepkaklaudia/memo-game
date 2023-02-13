@@ -3,11 +3,11 @@ import { Button } from "../../common/Button";
 
 export const Result = ({ restartGame }) => (
   <Wrapper
-    result
+    final
   >
     Awesome!
     <Button
-      result
+      final
       onClick={restartGame}
     >
       Finish Game
