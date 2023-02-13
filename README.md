@@ -1,5 +1,5 @@
 ## <img src="public/icon.png" height="30"/> Memo Game Website
-<img src="images/memo.gif" width="250" height="250"/>
+<img src="images/memo.gif" height="250"/>
 
 <img src="images/myIcons/iconK.svg" height="15"/> Made by Klaudia Kępka
 
