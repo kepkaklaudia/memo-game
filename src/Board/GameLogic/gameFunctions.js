@@ -1,4 +1,4 @@
-export const getFormedData = (data) => (
+export const getFormedData = data => (
   data.map((picture, index) => ({
     id: index,
     url: picture.src.small,
@@ -6,12 +6,14 @@ export const getFormedData = (data) => (
     isfound: false,
   }))
 );
+
 // Duplicate each image
-export const getPairedImages = (data) => (
+export const getPairedImages = data => (
   data.reduce((picture, i) => picture.concat(i, i), [])
 )
+
 // UniqueId to shuffle cards
-export const addUniqueId = (data) => (
+export const addUniqueId = data => (
   data.map((oldArray, i) => ({
     ...oldArray,
     uniqueId: i,
