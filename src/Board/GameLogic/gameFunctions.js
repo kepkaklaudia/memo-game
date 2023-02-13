@@ -10,7 +10,7 @@ export const getFormedData = data => (
 // Duplicate each image
 export const getPairedImages = data => (
   data.reduce((picture, i) => picture.concat(i, i), [])
-)
+);
 
 // UniqueId to shuffle cards
 export const addUniqueId = data => (
@@ -18,7 +18,7 @@ export const addUniqueId = data => (
     ...oldArray,
     uniqueId: i,
   }))
-)
+);
 
 export const shuffleCards = cards => {
   let m = cards.length;
