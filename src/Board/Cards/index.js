@@ -1,5 +1,4 @@
-import { Image } from "./Image"
-import { Wrapper, Card, Side } from "./styled"
+import { Wrapper, Card, Side, Image } from "./styled"
 
 export const Cards = ({ card, onCardClick }) => {
   const onClick = () => {
@@ -23,7 +22,9 @@ export const Cards = ({ card, onCardClick }) => {
           back
         >
           <Image
-            url={card.url}
+            alt=""
+            src={card.url}
+            width="150"
           />
         </Side>
       </Card>

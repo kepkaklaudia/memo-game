@@ -61,3 +61,7 @@ export const Side = styled.div`
     }`
   }
 `;
+
+export const Image = styled.img`
+  border-radius: 7px;
+`;
