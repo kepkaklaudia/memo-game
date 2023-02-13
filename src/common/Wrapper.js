@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   border-radius: 25px;
   padding: 10px;
   background-color: rgba(255,255,255,0.5); 
-  max-width: 700px;
+  max-width: 500px;
 
   ${({ final }) => final && css`
     margin: 20px auto;
