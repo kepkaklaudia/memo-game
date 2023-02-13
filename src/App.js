@@ -4,7 +4,7 @@ import { Board } from "./Board";
 import { Background } from "./Background";
 
 function App() {
-  const [gameSettings, setGameSettings] = useState()
+  const [gameSettings, setGameSettings] = useState();
 
   const startGame = settings => {
     setGameSettings(settings);
