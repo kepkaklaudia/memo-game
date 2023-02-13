@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 20px;
     background-color: rgb(0,143,255);
     overflow-x: hidden;
+    overflow-y: scroll;
 
   h1 {
     font-family: 'Permanent Marker', cursive;
