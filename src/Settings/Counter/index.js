@@ -20,7 +20,9 @@ export const Counter = ({ cardsCount, onClick }) => {
       <Button
         onClick={decrement}
       >
-        <Arrow decrement />
+        <Arrow
+          decrement
+        />
       </Button>
       {cardsCount}
       <Button
