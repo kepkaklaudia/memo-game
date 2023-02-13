@@ -1,8 +1,9 @@
-import { Wrapper } from "./styled";
+import { Wrapper } from "../../common/Wrapper";
+import { Button } from "../../common/Button";
 
-export const Result = ({restartGame}) => (
-  <Wrapper>
+export const Result = ({ restartGame }) => (
+  <Wrapper result>
     Awesome!
-    <button onClick={restartGame}>Finish Game</button>
+    <Button result onClick={restartGame}>Finish Game</Button>
   </Wrapper>
 )
