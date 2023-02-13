@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { addUniqueId, getFormedData, getPairedImages, shuffleCards } from "./gameFunctions";
 
 export const useLogic = (images) => {
+  const [score, setScore] = useState(0)
+  const [isWin, setIsWin] = useState(false)
   const [cards, setCards] = useState([])
   const [visibleCards, setVisibleCards] = useState([])
   const maxVisibleCards = 2;
@@ -36,6 +38,10 @@ export const useLogic = (images) => {
     };
   }
 
+  const updateScore = () => {
+    setScore(oldScore => oldScore + 1)
+  }
+
   const checkMatch = () => {
     const visible = cards.filter(card => visibleCards.indexOf(card.uniqueId) !== -1)
     const matched = visible[0].id === visible[1].id;
@@ -51,6 +57,7 @@ export const useLogic = (images) => {
     setTimeout(() => {
       setCards(updatedCards);
       setVisibleCards([]);
+      if (matched) updateScore();
     }, 1000);
   }
 
@@ -65,5 +72,11 @@ export const useLogic = (images) => {
     }
   }, [visibleCards]);
 
-  return { cards, onCardClick };
+  useEffect(() => {
+    if (images.length && score === images.length) {
+      setIsWin(true);
+    }
+  }, [score]);
+
+  return { cards, onCardClick, isWin };
 }
