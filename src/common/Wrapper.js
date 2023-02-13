@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     margin: 20px auto;
     padding-top: 20px;
     border-radius: 10px;
-    max-width: 300px; 
+    width: 250px; 
     justify-items: center;
   `}
 `;
