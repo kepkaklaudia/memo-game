@@ -5,12 +5,11 @@ export const Wrapper = styled.div`
   height: 150px;
   position: relative;
   perspective: 700px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 10px;
 `;
 
 export const Card = styled.div`
-  width: 100%;
+  width: 150px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   height: 100%;
   position: absolute;
