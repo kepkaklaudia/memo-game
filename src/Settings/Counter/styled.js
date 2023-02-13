@@ -28,21 +28,23 @@ export const Arrow = styled.span`
     0% {
       transform: rotate(315deg) translate(-8px, -8px);
     }
+
     100% {
       transform: rotate(315deg) translate(2px, 2px);
     }
   }
 
   ${({ decrement }) => decrement && css`
-  animation: animateD 1s infinite alternate;
+    animation: animateD 1s infinite alternate;
 
-  @keyframes animateD {
-    0% {
-      transform: rotate(135deg) translate(-8px, -8px);
+    @keyframes animateD {
+      0% {
+        transform: rotate(135deg) translate(-8px, -8px);
+      }
+
+      100% {
+        transform: rotate(135deg) translate(2px, 2px);
+      }
     }
-    100% {
-      transform: rotate(135deg) translate(2px, 2px);
-    }
-  }
   `}
 `;
