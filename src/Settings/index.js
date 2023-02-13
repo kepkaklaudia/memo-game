@@ -1,6 +1,6 @@
 import { categories, initialCardsCount } from "./constants";
 import { RadioBox } from "./RadioBox";
-import { Heading, BoxWrapper } from "./styled";
+import { Heading, BoxWrapper, Title } from "./styled";
 import { useState } from "react";
 import { Counter } from "./Counter";
 import { Wrapper } from "../common/Wrapper";
@@ -19,9 +19,9 @@ export const Settings = ({ startGame }) => {
       <Heading>
         Settings
       </Heading>
-      <h3>
+      <Title>
         Category:
-      </h3>
+      </Title>
       <BoxWrapper
         responsive
       >
@@ -34,9 +34,9 @@ export const Settings = ({ startGame }) => {
           />
         ))}
       </BoxWrapper>
-      <h3>
+      <Title>
         Amount of cards:
-      </h3>
+      </Title>
       <BoxWrapper>
         <Counter
           cardsCount={cardsCount}
