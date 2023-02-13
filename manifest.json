@@ -1,0 +1,6 @@
+{
+  "short_name": "Memo Game",
+  "name": "Memo Game",
+  "start_url": ".",
+  "display": "standalone"
+}
